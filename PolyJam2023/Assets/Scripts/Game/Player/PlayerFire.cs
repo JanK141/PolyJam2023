@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(PlayerCombo))]
 public class PlayerFire : MonoBehaviour
 {
 	public double IntervalDelay
@@ -13,16 +14,24 @@ public class PlayerFire : MonoBehaviour
 	}
 	
 	private double intervalDelay = 0.0;
-	
+	private PlayerCombo playerCombo;
+
+	private void Awake()
+	{
+		playerCombo = GetComponent<PlayerCombo>();
+	}
+
 	public void OnFire(InputValue iv)
 	{
 		if(IntervalDelayIsSufficientlySmall())
 		{
 			Debug.Log("Pressed in the right moment!");
+			playerCombo.IncreaseComboBy(1);
 		}
 		else
 		{
 			Debug.Log("WRONG!");
+			playerCombo.ResetCombo();
 		}	
 	}
 
