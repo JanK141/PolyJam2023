@@ -2,6 +2,14 @@ using UnityEngine;
 
 public class PlayerCombo : MonoBehaviour
 {
+	public int Combo
+	{
+		get
+		{
+			return combo;
+		}
+	}
+	
 	private int combo = 0;
 	private int comboModulus = 0;
 
@@ -17,12 +25,14 @@ public class PlayerCombo : MonoBehaviour
 			comboModulus = 0;
 		}
 
-		Debug.Log("Combo: " + combo);
+		GameManager.instance.OnComboChange();
 	}
 
 	public void ResetCombo()
 	{
 		combo = comboModulus = 0;
+
+		GameManager.instance.OnComboChange();
 	}
 
 	private bool ReachedRequiredForRadialAttack() => comboModulus == Constants.RADIAL_ATTACK_REQUIRED_COMBO;

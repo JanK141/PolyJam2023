@@ -1,8 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
 	public static GameManager instance = null;
+
 	public PlayerFire PlayerFire
 	{
 		get
@@ -10,8 +12,23 @@ public class GameManager : MonoBehaviour
 			return playerFire;
 		}
 	}
+	public PlayerCombo PlayerCombo
+	{
+		get
+		{
+			return playerCombo;
+		}
+	}
+
+	public ComboCounter comboCounter;
 
 	private PlayerFire playerFire;
+	private PlayerCombo playerCombo;
+
+	public void OnComboChange()
+	{
+		comboCounter.UpdateText();
+	}
 	
 	private void Awake()
 	{
@@ -36,5 +53,6 @@ public class GameManager : MonoBehaviour
 		GameObject player = GameObject.FindGameObjectWithTag(Constants.PLAYER_TAG);
 		
 		playerFire = player.GetComponent<PlayerFire>();
+		playerCombo = player.GetComponent<PlayerCombo>();
 	}
 }
