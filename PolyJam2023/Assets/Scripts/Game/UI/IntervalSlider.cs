@@ -3,15 +3,20 @@ using UnityEngine.UI;
 
 public class IntervalSlider : MonoBehaviour
 {
-	public PlayerFire playerFire;
 	public Image bgImage;
 
 	private Slider slider;
+	private PlayerFire playerFire;
 
 	private void Awake()
 	{
 		slider = GetComponent<Slider>();
 		slider.maxValue = Constants.INTERVAL_DELAY;
+	}
+
+	private void Start()
+	{
+		playerFire = GameManager.instance.PlayerFire;
 	}
 
 	private void Update()
