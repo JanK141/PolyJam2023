@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UIStyling.uss?fileID=7433441132597879392&amp;guid=063d1046fb82a0c46b9db5acdaa0f88a&amp;type=3#UIStyling" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="Container" style="justify-content: flex-end; align-items: flex-start; flex-basis: 50%; flex-grow: 1; padding-right: 5%; padding-left: 5%; padding-bottom: 5%; padding-top: 2%; background-color: rgb(120, 171, 64); flex-direction: column; -unity-text-align: middle-center; white-space: nowrap;">
+            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="Start" class="button" style="margin-right: 3px; margin-top: 1px; word-spacing: 0; translate: 0 -10px;" />
+            <ui:Button text="Credits" display-tooltip-when-elided="true" name="Credits" class="button" style="translate: 0 0;" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" class="button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
