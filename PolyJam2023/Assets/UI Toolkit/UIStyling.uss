@@ -1,19 +1,22 @@
 .button {
-    font-size: 24px;
-    -unity-font-style: bold;
-    width: 180px;
+    font-size: 40px;
+    -unity-font-style: normal;
+    width: 250px;
     height: 50px;
-    -unity-text-outline-width: 0;
-    -unity-text-outline-color: rgba(0, 0, 0, 255);
-    -unity-slice-left: 0;
-    -unity-slice-top: 0;
-    -unity-slice-right: 0;
-    -unity-slice-bottom: 0;
-    padding-left: 0;
+    -unity-text-outline-color: rgb(0, 0, 0);
+    padding-left: 7px;
     padding-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    justify-content: center;
+    padding-top: 5px;
+    justify-content: flex-end;
     align-items: center;
-    translate: 0 0;
+    -unity-font: url('project://database/Assets/AssetStore/Font/BLKCHCRY.TTF?fileID=12800000&guid=6ac2e44775357b148a8a6aabc0009166&type=3#BLKCHCRY');
+    -unity-font-definition: url('project://database/Assets/AssetStore/Font/BLKCHCRY%20SDF.asset?fileID=11400000&guid=a43960a411e08434abbbdeba02f25410&type=2#BLKCHCRY SDF');
+    -unity-text-align: middle-center;
+    margin-left: 0;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    bottom: auto;
+    top: auto;
+    padding-bottom: 5px;
 }
