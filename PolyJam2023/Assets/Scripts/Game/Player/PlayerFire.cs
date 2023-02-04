@@ -15,6 +15,7 @@ public class PlayerFire : MonoBehaviour
 	
 	private double intervalDelay = 0.0;
 	private PlayerCombo playerCombo;
+	private Animator animator;
 	private bool pressed = false;
 	
 	public bool IntervalDelayIsSufficientlySmall() => intervalDelay <= Constants.HIT_ERROR;
@@ -27,6 +28,7 @@ public class PlayerFire : MonoBehaviour
 	private void Awake()
 	{
 		playerCombo = GetComponent<PlayerCombo>();
+		animator = GetComponentInChildren<Animator>();
 	}
 
 	private void CheckPress()
@@ -34,6 +36,7 @@ public class PlayerFire : MonoBehaviour
 		if(!pressed)
 		{
 			pressed = true;
+			animator.SetTrigger("Attack");
 
 			if(IntervalDelayIsSufficientlySmall())
 			{
