@@ -1,4 +1,3 @@
-! obraz UI dla przenikania pomiędzy scenami (fade in, fade out)
 ! muzyka
 	O loop1 = początek muzyki do 16 uderzeń
 	O looprising = muzyka uruchamiana przy 17 uderzeniu
@@ -9,8 +8,10 @@
 	O "combo_max_intensity"
 		- gry gra, przestaje wtedy grać "melody1"
 
-O zaprogramowanie zmiany animacji dla gracza
-O wystrzeliwanie pocisków od gracza (prefab + skrypt)
-O umiejętności gracza uruchamiane za pomocą klawisza
 O wybór odpowiednich nut
 	O nuty dyktowane przez kolory
+
+O zaprogramowanie zmiany animacji dla gracza
+O wystrzeliwanie pocisków od gracza (prefab + skrypt)
+
+OO umiejętności gracza uruchamiane za pomocą klawisza
