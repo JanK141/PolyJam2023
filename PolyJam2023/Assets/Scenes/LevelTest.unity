@@ -1497,7 +1497,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 32, y: -72}
-  m_SizeDelta: {x: 256, y: 32}
+  m_SizeDelta: {x: 512, y: 64}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2002360830
 MonoBehaviour:
@@ -1522,7 +1522,7 @@ MonoBehaviour:
   m_text: COMBO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: eba0b69325ccdd448b2fa7dbc2da652a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1546,8 +1546,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1608,3 +1608,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455ff9ed570b66943acecacac1a7dd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  increasedFontSize: 64
+  fontSizeDecreaseSpeed: 32
