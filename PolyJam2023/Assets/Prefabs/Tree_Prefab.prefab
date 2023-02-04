@@ -51,9 +51,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Particle","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.ParticleSystem,
-      UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TreeMesh","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.MeshRenderer,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 6378834013018067121}
+    - {fileID: 2419338986346836153}
 --- !u!114 &8346291943256669098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +150,12 @@ PrefabInstance:
 --- !u!4 &2419338986344542809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ffd7554c6939e234893b5006a1407c54,
+    type: 3}
+  m_PrefabInstance: {fileID: 2419338986344933593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2419338986346836153 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: ffd7554c6939e234893b5006a1407c54,
     type: 3}
   m_PrefabInstance: {fileID: 2419338986344933593}
   m_PrefabAsset: {fileID: 0}
