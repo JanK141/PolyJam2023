@@ -1,4 +1,3 @@
-! efekty specjalne interfejsu użytkownika (zmiana rozmiaru czcionki, zmiana koloru itp.)
 ! obraz UI dla przenikania pomiędzy scenami (fade in, fade out)
 ! muzyka
 	O loop1 = początek muzyki do 16 uderzeń
