@@ -10,10 +10,8 @@
 		! gdy gra, przestaje wtedy grać "melody1"
 	! dopasowanie do licznika interwału
 
-! UI dla kolorów
-	- obracanie się okręgu
+! UI
 	- zmiana kanału alfa dla koloru
-! przypisanie czcionki
 ! osobny zapętlony emiter dla samego postępu wzrostu drzewa
 
 O wybór odpowiednich nut
