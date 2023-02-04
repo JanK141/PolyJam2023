@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	public ComboCounter comboCounter;
+	public FadeScreen fadeScreen;
 
 	private PlayerFire playerFire;
 	private PlayerCombo playerCombo;
@@ -27,6 +28,11 @@ public class GameManager : MonoBehaviour
 	public void OnComboChange()
 	{
 		comboCounter.UpdateText();
+	}
+
+	public void OnGameEnd()
+	{
+		fadeScreen.InverseDirection();
 	}
 	
 	private void Awake()

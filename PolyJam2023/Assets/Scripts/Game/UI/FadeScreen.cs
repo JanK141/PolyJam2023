@@ -4,10 +4,15 @@ using UnityEngine.UI;
 public class FadeScreen : MonoBehaviour
 {
 	public float fadeDuration = 2f;
-	public bool isFadingOut = true;
 
 	private Image image;
 	private float fadeTimer = 0f;
+	private bool isFadingOut = true;
+
+	public void InverseDirection()
+	{
+		isFadingOut = !isFadingOut;
+	}
 
 	private void Awake()
 	{

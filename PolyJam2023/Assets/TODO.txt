@@ -6,7 +6,7 @@
 	O melody1 = muzyka grana do czasu aż źle wykonamy kombinacje; gra jednocześnie przy "loop1" i "looprising"
 		- gdy źle, to wraca do "loop1" i jednorazowo odpala się "wrong_note"
 	O "combo_max_intensity"
-		- gry gra, przestaje wtedy grać "melody1"
+		- gdy gra, przestaje wtedy grać "melody1"
 
 O wybór odpowiednich nut
 	O nuty dyktowane przez kolory
