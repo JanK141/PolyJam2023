@@ -10,14 +10,14 @@
 		! gdy gra, przestaje wtedy grać "melody1"
 	! dopasowanie do licznika interwału
 
-! reset kombinacji kiedy nie wciśnie się w ogóle przycisku, a interwał dobiegnie końca
 ! UI dla kolorów
 	- obracanie się okręgu
 	- zmiana kanału alfa dla koloru
-O przypisanie czcionki
+! przypisanie czcionki
+! osobny zapętlony emiter dla samego postępu wzrostu drzewa
+
 O wybór odpowiednich nut
 	O nuty dyktowane przez kolory
-O osobny zapętlony emiter dla samego postępu wzrostu drzewa
 O zaprogramowanie zmiany animacji dla gracza
 O wystrzeliwanie pocisków od gracza (prefab + skrypt)
 
