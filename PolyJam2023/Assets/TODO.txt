@@ -1,16 +1,23 @@
 ! muzyka
-	O loop1 = początek muzyki do 16 uderzeń
-	O looprising = muzyka uruchamiana przy 17 uderzeniu
+	! loop1 = początek muzyki do 16 uderzeń
+		! jeśli skucha przed 16 z rzędu, to "loop1" leci od nowa
+	! combo_rising = muzyka uruchamiana przy 17 uderzeniu
 		- gdy się skończy, uruchamiać "combo_max_intensity" i potem gra w nieskończoność
-			- kiedy skucha, to wraca do "loop1"
-	O melody1 = muzyka grana do czasu aż źle wykonamy kombinacje; gra jednocześnie przy "loop1" i "looprising"
-		- gdy źle, to wraca do "loop1" i jednorazowo odpala się "wrong_note"
-	O "combo_max_intensity"
-		- gdy gra, przestaje wtedy grać "melody1"
+			! kiedy skucha, to wraca do "loop1"
+	! melody1 = muzyka grana do czasu aż źle wykonamy kombinacje; gra jednocześnie przy "loop1" i "combo_rising"
+		! gdy źle, to wraca do "loop1" i jednorazowo odpala się "wrong_note"
+	! "combo_max_intensity"
+		! gdy gra, przestaje wtedy grać "melody1"
+	! dopasowanie do licznika interwału
 
+! reset kombinacji kiedy nie wciśnie się w ogóle przycisku, a interwał dobiegnie końca
+! UI dla kolorów
+	- obracanie się okręgu
+	- zmiana kanału alfa dla koloru
+O przypisanie czcionki
 O wybór odpowiednich nut
 	O nuty dyktowane przez kolory
-
+O osobny zapętlony emiter dla samego postępu wzrostu drzewa
 O zaprogramowanie zmiany animacji dla gracza
 O wystrzeliwanie pocisków od gracza (prefab + skrypt)
 

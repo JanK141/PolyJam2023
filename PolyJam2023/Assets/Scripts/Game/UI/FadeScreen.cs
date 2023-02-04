@@ -28,8 +28,6 @@ public class FadeScreen : MonoBehaviour
 
 	private void Fade()
 	{
-		Debug.Log(fadeTimer);
-
 		UpdateTimer();
 		UpdateAlpha();
 	}
@@ -50,9 +48,9 @@ public class FadeScreen : MonoBehaviour
 	{
 		Color color = image.color;
 
-		color.a = fadeFactor();
+		color.a = FadeFactor();
 		image.color = color;
 	}
 
-	private float fadeFactor() => fadeTimer / fadeDuration;
+	private float FadeFactor() => fadeTimer / fadeDuration;
 }
