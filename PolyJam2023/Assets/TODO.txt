@@ -1,5 +1,4 @@
 ! wzrost obiektu lasu
-	! osobny skrypt dla rosnącej skali (od 0.01 do 1)
 	! osobny skrypt dla zmiany modelu ala "awans"
 		- emiter podczas "awansowania"
 
