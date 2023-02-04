@@ -8,6 +8,8 @@ public class ObjectScaler : MonoBehaviour
 
 	private float growDuration = 0.0f;
 
+	public bool HasReachedTargetScale() => growDuration >= scaleDuration;
+
 	private void Start()
 	{
 		SetScale(initialScale);
@@ -30,5 +32,5 @@ public class ObjectScaler : MonoBehaviour
 
 	private bool HasNotGrownUpYet() => transform.localScale.x < targetScale && transform.localScale.y < targetScale && transform.localScale.z < targetScale;
 	private void SetScale(float factor) => transform.localScale = Vector3.one*factor;
-	private float ScaleFactor() => (growDuration > 0.0f) ? (growDuration / scaleDuration)*targetScale : initialScale;
+	private float ScaleFactor() => (growDuration > 0.0f) ? Mathf.Clamp((growDuration / scaleDuration)*targetScale, initialScale, targetScale) : initialScale;
 }
