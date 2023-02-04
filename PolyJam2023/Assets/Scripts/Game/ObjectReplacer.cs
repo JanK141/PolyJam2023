@@ -4,12 +4,14 @@ public class ObjectReplacer : MonoBehaviour
 {
 	private GameObject currentModel;
 
-	public void InstantiateModel(GameObject model)
+	public GameObject InstantiateModel(GameObject model)
 	{
 		currentModel = ModelInstance(model);
 
 		SetParentToModel(currentModel);
 		ChangeModel(model);
+
+		return currentModel;
 	}
 
 	private void ChangeModel(GameObject model)

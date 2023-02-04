@@ -112,4 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialScale: 0.01
   targetScale: 1
-  scaleDuration: 60
+  scaleDuration: 10
