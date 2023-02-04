@@ -15,28 +15,39 @@ public class PlayerFire : MonoBehaviour
 	
 	private double intervalDelay = 0.0;
 	private PlayerCombo playerCombo;
+	private bool pressed = false;
+	
+	public bool IntervalDelayIsSufficientlySmall() => intervalDelay <= Constants.HIT_ERROR;
+
+	public void OnFire(InputValue iv)
+	{
+		CheckPress();
+	}
 
 	private void Awake()
 	{
 		playerCombo = GetComponent<PlayerCombo>();
 	}
 
-	public void OnFire(InputValue iv)
+	private void CheckPress()
 	{
-		if(IntervalDelayIsSufficientlySmall())
+		if(!pressed)
 		{
-			Debug.Log("Pressed in the right moment!");
-			playerCombo.IncreaseComboBy(1);
+			pressed = true;
+
+			if(IntervalDelayIsSufficientlySmall())
+			{
+				Debug.Log("Pressed in the right moment!");
+				playerCombo.IncreaseComboBy(1);
+			}
+			else
+			{
+				Debug.Log("WRONG!");
+				playerCombo.ResetCombo();
+			}
 		}
-		else
-		{
-			Debug.Log("WRONG!");
-			playerCombo.ResetCombo();
-		}	
 	}
-
-	public bool IntervalDelayIsSufficientlySmall() => intervalDelay <= Constants.HIT_ERROR;
-
+	
 	private void Update()
 	{
 		ControlIntervalDelay();
@@ -44,13 +55,25 @@ public class PlayerFire : MonoBehaviour
 
 	private void ControlIntervalDelay()
 	{
-		if(intervalDelay <= 0)
+		if(IntervalDelayReachedEnd())
 		{
 			intervalDelay = Constants.INTERVAL_DELAY;
+
+			ResetPress();
 		}
 		else
 		{
 			intervalDelay -= Time.deltaTime;
+		}
+	}
+
+	private bool IntervalDelayReachedEnd() => intervalDelay <= 0;
+
+	private void ResetPress()
+	{
+		if(pressed)
+		{
+			pressed = false;
 		}
 	}
 }

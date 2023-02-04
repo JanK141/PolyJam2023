@@ -1,0 +1,10 @@
+! wzrost obiektu lasu
+	! osobny skrypt dla rosnącej skali (od 0.01 do 1)
+	! osobny skrypt dla zmiany modelu ala "awans"
+		- emiter podczas "awansowania"
+
+O efekty specjalne interfejsu użytkownika (zmiana rozmiaru czcionki, zmiana koloru itp.)
+O obraz UI dla przenikania pomiędzy scenami (fade in, fade out)
+O zaprogramowanie zmiany animacji dla gracza
+O wystrzeliwanie pocisków od gracza (prefab + skrypt)
+O umiejętności gracza uruchamiane za pomocą klawisza

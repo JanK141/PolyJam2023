@@ -28,7 +28,7 @@ public class IntervalSlider : MonoBehaviour
 
 	private void SetBackgroundColor()
 	{
-		Color color = playerFire.IntervalDelayIsSufficientlySmall() ? Color.red : Color.white;
+		Color color = playerFire.IntervalDelayIsSufficientlySmall() ? Constants.INTERVAL_SLIDER_BACKGROUND_SIGNAL_COLOR : Constants.INTERVAL_SLIDER_BACKGROUND_NORMAL_COLOR;
 
 		bgImage.color = color;
 	}
