@@ -66,6 +66,11 @@ public class PlayerFire : MonoBehaviour
 		{
 			intervalDelay = Constants.INTERVAL_DELAY;
 
+			if(!pressed)
+			{
+				playerCombo.ResetCombo();
+			}
+
 			ResetPress();
 		}
 		else

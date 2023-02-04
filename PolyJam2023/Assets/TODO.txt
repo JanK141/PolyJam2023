@@ -1,17 +1,17 @@
 ! muzyka
-	X loop1 = początek muzyki do 16 uderzeń
-		X jeśli skucha przed 16 z rzędu, to "loop1" leci od nowa
-	X combo_rising = muzyka uruchamiana przy 17 uderzeniu
+	! loop1 = początek muzyki do 16 uderzeń
+		! jeśli skucha przed 16 z rzędu, to "loop1" leci od nowa
+	! combo_rising = muzyka uruchamiana przy 17 uderzeniu
 		- gdy się skończy, uruchamiać "combo_max_intensity" i potem gra w nieskończoność
-			X kiedy skucha, to wraca do "loop1"
-	X melody1 = muzyka grana do czasu aż źle wykonamy kombinacje; gra jednocześnie przy "loop1" i "combo_rising"
-		X gdy źle, to wraca do "loop1" i jednorazowo odpala się "wrong_note"
-	X "combo_max_intensity"
-		X gdy gra, przestaje wtedy grać "melody1"
+			! kiedy skucha, to wraca do "loop1"
+	! melody1 = muzyka grana do czasu aż źle wykonamy kombinacje; gra jednocześnie przy "loop1" i "combo_rising"
+		! gdy źle, to wraca do "loop1" i jednorazowo odpala się "wrong_note"
+	! "combo_max_intensity"
+		! gdy gra, przestaje wtedy grać "melody1"
 	! dopasowanie do licznika interwału
 
-O reset kombinacji kiedy nie wciśnie się w ogóle przycisku, a interwał dobiegnie końca
-O UI dla kolorów
+! reset kombinacji kiedy nie wciśnie się w ogóle przycisku, a interwał dobiegnie końca
+! UI dla kolorów
 	- obracanie się okręgu
 	- zmiana kanału alfa dla koloru
 O przypisanie czcionki
