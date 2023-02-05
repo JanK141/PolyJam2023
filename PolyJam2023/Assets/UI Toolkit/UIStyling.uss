@@ -1,9 +1,8 @@
 .button {
-    font-size: 40px;
-    -unity-font-style: normal;
+    font-size: 35px;
+    -unity-font-style: bold;
     width: 250px;
     height: 50px;
-    -unity-text-outline-color: rgb(0, 0, 0);
     padding-left: 7px;
     padding-right: 0;
     padding-top: 5px;
@@ -13,10 +12,18 @@
     -unity-font-definition: url('project://database/Assets/AssetStore/Font/BLKCHCRY%20SDF.asset?fileID=11400000&guid=a43960a411e08434abbbdeba02f25410&type=2#BLKCHCRY SDF');
     -unity-text-align: middle-center;
     margin-left: 0;
-    color: rgb(255, 255, 255);
+    color: rgb(56, 21, 51);
     letter-spacing: 2px;
     word-spacing: 4px;
-    bottom: auto;
-    top: auto;
     padding-bottom: 5px;
+    -unity-text-outline-width: 1px;
+    background-color: rgba(117, 47, 105, 255);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgba(56, 21, 51, 255);
+    border-right-color: rgba(56, 21, 51, 255);
+    border-top-color: rgba(56, 21, 51, 255);
+    border-bottom-color: rgba(56, 21, 51, 255);
 }

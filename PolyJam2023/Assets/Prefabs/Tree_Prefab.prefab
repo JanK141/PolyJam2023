@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3416105818917934998}
   - component: {fileID: 5513235387476143409}
   - component: {fileID: 8346291943256669098}
-  - component: {fileID: 5178554575345741267}
   - component: {fileID: 5614423822387844441}
+  - component: {fileID: 7373817725801204886}
   m_Layer: 0
   m_Name: Tree_Prefab
   m_TagString: Untagged
@@ -52,10 +52,16 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Particle","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.ParticleSystem,
       UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TreeMesh","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.MeshRenderer,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Mesh_Threshold_01","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Mesh,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Mesh_Threshold_02","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Mesh,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CollisionCheck","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.SphereCollider,
+      UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 6378834013018067121}
     - {fileID: 2419338986346836153}
+    - {fileID: 4300000, guid: f3cbbc97db751ca4bbdece9e11a3473d, type: 3}
+    - {fileID: 4300000, guid: 65da4e16b8860e24f8054562a4c2f79b, type: 3}
+    - {fileID: 7373817725801204886}
 --- !u!114 &8346291943256669098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,20 +78,6 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: d903a7bcee33c4c44a1d54d18e071468, type: 2}
---- !u!136 &5178554575345741267
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4763676301288315520}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &5614423822387844441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +90,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df96669965cb4d29a0176903c854365a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &7373817725801204886
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4763676301288315520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &2419338986344933593
 PrefabInstance:
   m_ObjectHideFlags: 0
