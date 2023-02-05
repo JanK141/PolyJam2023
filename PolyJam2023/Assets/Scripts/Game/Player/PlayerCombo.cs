@@ -22,7 +22,6 @@ public class PlayerCombo : MonoBehaviour
 		if(ReachedRequiredForRadialAttack())
 		{
 			GameManager.instance.SoundtrackManager.UpdateTrack(1);
-            Debug.Log("RADIAL ATTACK!");
 
 			comboModulus = 0;
 		}

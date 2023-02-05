@@ -69,7 +69,7 @@ public class PlayerFire : MonoBehaviour
         }
 	}
 
-
+	public bool IntervalReachedEnd() => Interval <= 0;
 
 
 

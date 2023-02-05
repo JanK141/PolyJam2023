@@ -150,4 +150,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   damagePerHit: 25
-  AttackInterval: 2.5
+  AttackInterval: 3

@@ -5,7 +5,7 @@ public class FadeScreen : MonoBehaviour
 {
 	public float fadeDuration = 2f;
 
-	private Image image;
+	private RawImage image;
 	private float fadeTimer = 0f;
 	private bool isFadingOut = true;
 
@@ -16,7 +16,7 @@ public class FadeScreen : MonoBehaviour
 
 	private void Awake()
 	{
-		image = GetComponent<Image>();
+		image = GetComponent<RawImage>();
 
 		fadeTimer = fadeDuration;
 	}

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Nature
   - CinemachineTarget
+  - Tree
   layers:
   - Default
   - TransparentFX
