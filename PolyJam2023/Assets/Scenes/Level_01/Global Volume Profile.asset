@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 15
+    m_Value: 30
   gaussianEnd:
     m_OverrideState: 1
     m_Value: 50
@@ -49,7 +49,7 @@ MonoBehaviour:
     m_Value: 1
   highQualitySampling:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 1
   focusDistance:
     m_OverrideState: 0
     m_Value: 10
@@ -105,7 +105,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.309
+    m_Value: 0.3
   smoothness:
     m_OverrideState: 0
     m_Value: 0.2
