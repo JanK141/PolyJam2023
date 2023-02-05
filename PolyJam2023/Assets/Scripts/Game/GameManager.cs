@@ -19,11 +19,20 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	public SoundtrackManager SoundtrackManager
+	{
+		get
+		{
+			return soundtrackManager;
+		}
+	}
+
 	public ComboCounter comboCounter;
 	public FadeScreen fadeScreen;
 
 	private PlayerFire playerFire;
 	private PlayerCombo playerCombo;
+	private SoundtrackManager soundtrackManager;
 
 	public void OnComboChange()
 	{
@@ -59,5 +68,6 @@ public class GameManager : MonoBehaviour
 		
 		playerFire = player.GetComponent<PlayerFire>();
 		playerCombo = player.GetComponent<PlayerCombo>();
+		soundtrackManager = FindObjectOfType<SoundtrackManager>();
 	}
 }

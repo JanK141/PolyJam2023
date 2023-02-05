@@ -5,78 +5,76 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerCombo))]
 public class PlayerFire : MonoBehaviour
 {
-	public double IntervalDelay
-	{
-		get
-		{
-			return intervalDelay;
-		}
-	}
-	
-	private double intervalDelay = 0.0;
+	[SerializeField] private IntVariable BPM;
+	[SerializeField] private float errorAllowance = 0.25f;
+	[SerializeField] private ParticleSystem Projectile;
+
+	private float Interval => 60f / BPM.Value;
+
+	public float Progression => 1 - (_time/Interval);
+
+	private float _time = 0f;
 	private PlayerCombo playerCombo;
 	private Animator animator;
-	private bool pressed = false;
-	
-	public bool IntervalDelayIsSufficientlySmall() => intervalDelay <= Constants.HIT_ERROR;
-
-	public void OnFire(InputValue iv)
-	{
-		CheckPress();
-	}
+	private Camera cam;
 
 	private void Awake()
 	{
 		playerCombo = GetComponent<PlayerCombo>();
 		animator = GetComponentInChildren<Animator>();
+		cam = Camera.main;
 	}
 
-	private void CheckPress()
-	{
-		if(!pressed)
-		{
-			pressed = true;
-			animator.SetTrigger("Attack");
-
-			if(IntervalDelayIsSufficientlySmall())
-			{
-				Debug.Log("Pressed in the right moment!");
-				playerCombo.IncreaseComboBy(1);
-			}
-			else
-			{
-				Debug.Log("WRONG!");
-				playerCombo.ResetCombo();
-			}
-		}
-	}
-	
 	private void Update()
 	{
-		ControlIntervalDelay();
+		_time += Time.deltaTime;
+		if (_time >= Interval + errorAllowance)
+		{
+			_time -= Interval;
+			playerCombo.ResetCombo();
+		}
 	}
 
-	private void ControlIntervalDelay()
-	{
-		if(IntervalDelayReachedEnd())
-		{
-			intervalDelay = Constants.INTERVAL_DELAY;
 
-			ResetPress();
-		}
+	public void OnFire(InputValue iv)
+	{
+		animator.SetTrigger("Attack");
+		if(_time >= Interval - errorAllowance && _time <= Interval + errorAllowance)
+		{
+            _time -= Interval;
+			playerCombo.IncreaseComboBy(1);
+            RaycastHit info;
+            Vector3 target = Vector3.zero;
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out info, 100f))
+            {
+                target = info.point;
+				if (info.transform.TryGetComponent<Grow>(out var grow))
+				{
+					grow.ReceiveBoost();
+				}
+            }
+            else
+            {
+                target = cam.transform.position + (100 * cam.transform.forward);
+            }
+            transform.LookAt(new Vector3(target.x, transform.position.y, target.z));
+            Projectile.transform.LookAt(target);
+			Projectile.Emit(1);
+        }
 		else
 		{
-			intervalDelay -= Time.deltaTime;
-		}
+            _time -= Interval;
+			_time = _time%Interval;
+			playerCombo.ResetCombo();
+        }
 	}
 
-	private bool IntervalDelayReachedEnd() => intervalDelay <= 0;
 
-	private void ResetPress()
-	{
-		if(pressed)
-		{
-			pressed = false;
-		}
-	}
+
+
+
+
+
+
+
 }

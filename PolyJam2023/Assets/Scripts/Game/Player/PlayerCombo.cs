@@ -15,12 +15,14 @@ public class PlayerCombo : MonoBehaviour
 
 	public void IncreaseComboBy(int n)
 	{
+		GameManager.instance.SoundtrackManager.SetMelodyVolume(1);
 		combo += n;
 		comboModulus += n;
 
 		if(ReachedRequiredForRadialAttack())
 		{
-			Debug.Log("RADIAL ATTACK!");
+			GameManager.instance.SoundtrackManager.UpdateTrack(1);
+            Debug.Log("RADIAL ATTACK!");
 
 			comboModulus = 0;
 		}
@@ -33,7 +35,9 @@ public class PlayerCombo : MonoBehaviour
 		combo = comboModulus = 0;
 
 		GameManager.instance.OnComboChange();
-	}
+        GameManager.instance.SoundtrackManager.SetMelodyVolume(0);
+        GameManager.instance.SoundtrackManager.UpdateTrack(-1);
+    }
 
 	private bool ReachedRequiredForRadialAttack() => comboModulus == Constants.RADIAL_ATTACK_REQUIRED_COMBO;
 }

@@ -20,7 +20,7 @@ AvatarMask:
   - m_Path: game_rig/DEF-breast.R
     m_Weight: 0
   - m_Path: game_rig/DEF-lira
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: game_rig/DEF-pelvis.L
     m_Weight: 0
   - m_Path: game_rig/DEF-pelvis.R
@@ -34,7 +34,7 @@ AvatarMask:
   - m_Path: game_rig/DEF-spine/DEF-spine.001
     m_Weight: 0
   - m_Path: game_rig/DEF-spine/DEF-spine.001/DEF-spine.002
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: game_rig/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003
     m_Weight: 1
   - m_Path: game_rig/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004

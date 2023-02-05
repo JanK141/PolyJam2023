@@ -21,14 +21,14 @@ public class IntervalSlider : MonoBehaviour
 
 	private void Update()
 	{
-		slider.value = (float)playerFire.IntervalDelay;
+		slider.value = Mathf.Clamp01(playerFire.Progression);
 
 		SetBackgroundColor();
 	}
 
 	private void SetBackgroundColor()
 	{
-		Color color = playerFire.IntervalDelayIsSufficientlySmall() ? Constants.INTERVAL_SLIDER_BACKGROUND_SIGNAL_COLOR : Constants.INTERVAL_SLIDER_BACKGROUND_NORMAL_COLOR;
+		Color color = slider.value<0.2f ? Constants.INTERVAL_SLIDER_BACKGROUND_SIGNAL_COLOR : Constants.INTERVAL_SLIDER_BACKGROUND_NORMAL_COLOR;
 
 		bgImage.color = color;
 	}

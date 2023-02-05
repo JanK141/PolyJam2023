@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
@@ -17,12 +18,14 @@ public class PlayerMovement : MonoBehaviour
 	private Vector2 currentInput;
 	private Vector3 velocity;
 	private InputAction action;
+	private Camera cam;
 
 	private void Awake()
 	{
 		contr = GetComponent<CharacterController>();
 		animator = GetComponentInChildren<Animator>();
 		action = GetComponent<PlayerInput>().actions["Move"];
+		cam = Camera.main;
 	}
 
 	/*public void OnMove(InputValue iv)
@@ -58,8 +61,9 @@ public class PlayerMovement : MonoBehaviour
 		Vector2 moveInput = action.ReadValue<Vector2>();
 		Vector2 smoothedInput = Vector2.zero;
 		currentInput = Vector2.SmoothDamp(currentInput, moveInput * movementSpeed, ref smoothedInput, 0.5f);
+		//var tmp = new Vector3(smoothedInput.x, velocity.y, smoothedInput.y);
 		velocity = new Vector3(smoothedInput.x, velocity.y, smoothedInput.y);
-        if (isGrounded && velocity.y < 0) velocity.y = -2f;
+		if (isGrounded && velocity.y < 0) velocity.y = -2f;
 		else velocity.y += gravity * Time.deltaTime;
 		contr.Move(velocity * Time.deltaTime);
         print("SPEED IS: " + Mathf.Sqrt(contr.velocity.x * contr.velocity.x + contr.velocity.z * contr.velocity.z));
