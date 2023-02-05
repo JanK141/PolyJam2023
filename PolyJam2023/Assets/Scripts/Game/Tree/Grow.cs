@@ -23,9 +23,10 @@ public class Grow : MonoBehaviour, IDamagable
     {
         Health -= damagePerHit;
         transform.DOShakePosition(0.2f);
-        if (Health < 0)
+
+        if(Health < 0)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 

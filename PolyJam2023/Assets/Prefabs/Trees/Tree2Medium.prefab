@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 200
   damagePerHit: 25
-  BPM: {fileID: 0}
+  BPM: {fileID: 11400000, guid: ff4082a67db52614cb901f673ef1019f, type: 2}
   InitScale: 50
   ScalePerBit: 1
   TargetScale: 100
