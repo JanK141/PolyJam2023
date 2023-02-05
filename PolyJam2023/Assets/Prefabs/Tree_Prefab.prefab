@@ -61,7 +61,7 @@ MonoBehaviour:
     - {fileID: 6378834013018067121}
     - {fileID: 2419338986346836153}
     - {fileID: 4300000, guid: f3cbbc97db751ca4bbdece9e11a3473d, type: 3}
-    - {fileID: 4300000, guid: 65da4e16b8860e24f8054562a4c2f79b, type: 3}
+    - {fileID: 4300000, guid: 9fae74d265a74ed47af4a6cde5522f5b, type: 3}
     - {fileID: 7373817725801204886}
 --- !u!114 &8346291943256669098
 MonoBehaviour:
@@ -102,7 +102,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 3
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &2419338986344933593
 PrefabInstance:
